@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "103007084551",
+    "firebase_url": "https://reminderme-1122.firebaseio.com",
+    "project_id": "reminderme-1122",
+    "storage_bucket": "reminderme-1122.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103007084551:android:aed81ea582e9217d",
+        "android_client_info": {
+          "package_name": "com.silverkitten.reminderme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103007084551-c12b59d2qcmeitmti7ipbrv79fol45m5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQF6gemUwLrwzPkds9-aR3DI1odb1KR1I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
