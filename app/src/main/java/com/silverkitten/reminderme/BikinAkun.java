@@ -96,7 +96,7 @@ public class BikinAkun extends AppCompatActivity {
                         .addOnCompleteListener(BikinAkun.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toast.makeText(BikinAkun.this, "User berhasil dibuat", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(BikinAkun.this, "User berhasil dibuat.", Toast.LENGTH_SHORT).show();
                                 //Data dari SQLITE
                                 myDb.insertData("value1",inputEmail.getText().toString().trim(),inputPassword.getText().toString().trim());
 
