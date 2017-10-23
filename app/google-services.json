@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "103007084551-61eu2aer2usgrv62l1g2poqdi033jj8d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.silverkitten.reminderme",
+            "certificate_hash": "caa1805e8fb1ba8a07b75cfc5b57d56b265c89d7"
+          }
+        },
+        {
           "client_id": "103007084551-c12b59d2qcmeitmti7ipbrv79fol45m5.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103007084551-c12b59d2qcmeitmti7ipbrv79fol45m5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

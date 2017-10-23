@@ -29,8 +29,6 @@
 
         <activity android:name=".FotoMakanan" />
         <activity android:name=".FotoFasilitas" />
-        <activity android:name=".ListMakanan" />
-        <activity android:name=".ListMinuman" />
         <activity android:name=".Cart" />
         <activity
             android:name=".Order"
