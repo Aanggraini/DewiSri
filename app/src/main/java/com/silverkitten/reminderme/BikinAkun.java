@@ -21,6 +21,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.silverkitten.reminderme.R;
 
 public class BikinAkun extends AppCompatActivity {
@@ -37,7 +41,9 @@ public class BikinAkun extends AppCompatActivity {
         inputEmail = (EditText) findViewById(R.id.namaUser);
         inputPassword = (EditText) findViewById(R.id.passUser);
         button = (Button)findViewById(R.id.buatAkun);
-
+        //bawah ini database SQLITE, ganti pake MYSQL aja WAMPP
+        final DataBaseHelper myDb = new DataBaseHelper(this);
+        
         final EditText tgl = (EditText) findViewById(R.id.tanggal);
         tgl.setOnClickListener(new View.OnClickListener() {
 
@@ -90,7 +96,11 @@ public class BikinAkun extends AppCompatActivity {
                         .addOnCompleteListener(BikinAkun.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toast.makeText(BikinAkun.this, "User berhasil dibuat.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(BikinAkun.this, "User berhasil dibuat", Toast.LENGTH_SHORT).show();
+                                //Data dari SQLITE
+                                myDb.insertData("value1",inputEmail.getText().toString().trim(),inputPassword.getText().toString().trim());
+
+
                                 progressBar.setVisibility(View.GONE);
                                 // If sign in fails, display a message to the user. If sign in succeeds
                                 // the auth state listener will be notified and logic to handle the
@@ -107,6 +117,9 @@ public class BikinAkun extends AppCompatActivity {
 
             }
         });
+
+
+
     }
     @Override
     protected void onResume() {
