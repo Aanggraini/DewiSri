@@ -42,7 +42,6 @@ public class BikinAkun extends AppCompatActivity {
         inputPassword = (EditText) findViewById(R.id.passUser);
         button = (Button)findViewById(R.id.buatAkun);
         //bawah ini database SQLITE, ganti pake MYSQL aja WAMPP
-        final DataBaseHelper myDb = new DataBaseHelper(this);
         
         final EditText tgl = (EditText) findViewById(R.id.tanggal);
         tgl.setOnClickListener(new View.OnClickListener() {
@@ -96,9 +95,7 @@ public class BikinAkun extends AppCompatActivity {
                         .addOnCompleteListener(BikinAkun.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toast.makeText(BikinAkun.this, "User berhasil dibuat.", Toast.LENGTH_SHORT).show();
-                                //Data dari SQLITE
-                                myDb.insertData("value1",inputEmail.getText().toString().trim(),inputPassword.getText().toString().trim());
+                                Toast.makeText(BikinAkun.this, "User berhasil dibuat", Toast.LENGTH_SHORT).show();
 
 
                                 progressBar.setVisibility(View.GONE);
