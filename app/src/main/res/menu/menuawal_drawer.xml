@@ -8,9 +8,9 @@
             android:icon="@drawable/ic_face"
             android:title="Profile" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_photos"
-            android:title="Galerry" />
+            android:id="@+id/nav_company"
+            android:icon="@drawable/ic_home"
+            android:title="Dewi Sri" />
         <item
             android:id="@+id/nav_order"
             android:icon="@drawable/ic_shop"

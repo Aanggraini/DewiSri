@@ -11,6 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -26,7 +28,19 @@ public class MenuAwal extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         auth = FirebaseAuth.getInstance();
+        ImageButton makanan = (ImageButton)findViewById(R.id.makananbutton);
 
+        ImageButton fasilitas = (ImageButton)findViewById(R.id.fasilitasbutton);
+        makanan.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MenuAwal.this, FotoMakanan.class));
+            }
+        });
+        fasilitas.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MenuAwal.this, FotoFasilitas.class));
+            }
+        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -75,8 +89,8 @@ public class MenuAwal extends AppCompatActivity
 
         if (id == R.id.nav_profile) {
             startActivity(new Intent(MenuAwal.this, Profile.class));
-        } else if (id == R.id.nav_gallery) {
-            startActivity(new Intent(MenuAwal.this, Gallery.class));
+        } else if (id == R.id.nav_company) {
+            startActivity(new Intent(MenuAwal.this, Company.class));
         } else if (id == R.id.nav_order) {
             startActivity(new Intent(MenuAwal.this, Order.class));
         } else if(id == R.id.nav_signout){

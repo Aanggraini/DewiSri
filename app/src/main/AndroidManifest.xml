@@ -17,7 +17,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".BikinAkun" />
-        <activity android:name=".Gallery" />
         <activity android:name=".ResetPass" />
         <activity
             android:name=".MenuAwal"
@@ -33,7 +32,8 @@
         <activity
             android:name=".Order"
             android:label="@string/title_activity_order"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Company"></activity>
     </application>
 
 </manifest>
