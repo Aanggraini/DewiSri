@@ -1,14 +1,22 @@
 package layout;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
+import com.silverkitten.reminderme.Konfirmasi_Order;
 import com.silverkitten.reminderme.R;
+
+import static com.silverkitten.reminderme.R.layout.fragment_cart;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +31,8 @@ public class cart extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    Button button;
+    View view;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -52,20 +62,50 @@ public class cart extends Fragment {
         return fragment;
     }
 
-    @Override
+    /*@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-    }
 
-    @Override
+
+    }*/
+
+    /*@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cart, container, false);
+        view =  inflater.inflate(fragment_cart, container, false);
+        button = (Button) view.findViewById(R.id.pesan);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (v == button) {
+                    Intent intent = new Intent(getActivity(), Konfirmasi_Order.class);
+                    startActivity(intent);
+                }
+            }
+        });
+        return view;
+    }*/
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater,  ViewGroup container,Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        view =  inflater.inflate(R.layout.fragment_cart, container, false);
+        Button button = (Button) view.findViewById(R.id.pesan1);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(),"TES", Toast.LENGTH_LONG).show();
+                    /*Intent intent = new Intent(getActivity(), Konfirmasi_Order.class);
+                    getActivity().startActivity(intent);
+                    */
+            }
+        });
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

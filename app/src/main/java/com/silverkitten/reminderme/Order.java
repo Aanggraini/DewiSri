@@ -19,6 +19,9 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
+import layout.cart;
+import layout.submakanan;
+
 public class Order extends AppCompatActivity {
 
     /**
@@ -108,10 +111,6 @@ public class Order extends AppCompatActivity {
                 View rootView = inflater.inflate(R.layout.fragment_submakanan, container, false);
                 return rootView;
             }
-            else if(getArguments().getInt(ARG_SECTION_NUMBER)==2) {
-                View rootView = inflater.inflate(R.layout.fragment_subminuman, container, false);
-                return rootView;
-            }
             else {
                 View rootView = inflater.inflate(R.layout.fragment_cart, container, false);
                 return rootView;
@@ -134,12 +133,13 @@ public class Order extends AppCompatActivity {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
             return PlaceholderFragment.newInstance(position + 1);
+
         }
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
-            return 3;
+            // Show 2 total pages.
+            return 2;
         }
 
         @Override
@@ -148,8 +148,6 @@ public class Order extends AppCompatActivity {
                 case 0:
                     return "Makanan";
                 case 1:
-                    return "Minuman";
-                case 2:
                     return "Cart";
             }
             return null;

@@ -14,61 +14,68 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/makanan1"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginTop="20dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/list1" />
+                android:layout_height="wrap_content">
 
-            <ImageButton
-                android:id="@+id/makanan2"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginTop="20dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/list1" />
+                <ImageView
+                    android:id="@+id/makanan1"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/menu_makanan1" />
 
-            <ImageButton
-                android:id="@+id/makanan3"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginTop="20dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/list1" />
+                <TextView
+                    android:id="@+id/porsi1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/makanan1"
+                    android:layout_toLeftOf="@+id/jumlah1"
+                    android:text="Jumlah Porsi : " />
 
-            <ImageButton
-                android:id="@+id/makanan4"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginTop="20dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/list1" />
+                <EditText
+                    android:id="@+id/jumlah1"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:inputType="number"
+                    android:textAlignment="center" />
+            </RelativeLayout>
 
-            <ImageButton
-                android:id="@+id/makanan5"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginTop="20dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/list1" />
+                android:layout_height="wrap_content">
 
-            <ImageButton
-                android:id="@+id/makanan6"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginTop="20dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/list1" />
+                <ImageView
+                    android:id="@+id/makanan2"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/menu_makanan1" />
 
-            <ImageButton
-                android:id="@+id/makanan7"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginTop="20dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/list1" />
+                <TextView
+                    android:id="@+id/porsi2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/makanan2"
+                    android:layout_toLeftOf="@+id/jumlah2"
+                    android:text="Jumlah Porsi : " />
+
+                <EditText
+                    android:id="@+id/jumlah2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:inputType="number"
+                    android:textAlignment="center" />
+            </RelativeLayout>
+
 
         </LinearLayout>
 

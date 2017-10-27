@@ -28,12 +28,12 @@
 
         <activity android:name=".FotoMakanan" />
         <activity android:name=".FotoFasilitas" />
-        <activity android:name=".Cart" />
         <activity
             android:name=".Order"
             android:label="@string/title_activity_order"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Company"></activity>
+        <activity android:name=".Company" />
+        <activity android:name=".Konfirmasi_Order"></activity>
     </application>
 
 </manifest>
